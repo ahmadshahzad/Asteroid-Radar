@@ -6,7 +6,7 @@
     <data>
         <variable
             name="imageOfTheDay"
-            type="com.udacity.asteroidradar.network.response.ImageOfTheDayResponse" />
+            type="com.udacity.asteroidradar.PictureOfDay" />
 
     </data>
 

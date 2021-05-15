@@ -1,6 +1,6 @@
 package com.udacity.asteroidradar.network.api
 
-import com.udacity.asteroidradar.network.response.ImageOfTheDayResponse
+import com.udacity.asteroidradar.PictureOfDay
 import okhttp3.ResponseBody
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -17,5 +17,5 @@ interface AsteroidServiceApi {
     ): ResponseBody
 
     @GET("/planetary/apod?api_key=${API_KEY}")
-    suspend fun getImageOfTheDay(): ImageOfTheDayResponse
+    suspend fun getImageOfTheDay(): PictureOfDay
 }

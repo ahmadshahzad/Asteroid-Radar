@@ -6,8 +6,8 @@ import androidx.lifecycle.Transformations.switchMap
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.udacity.asteroidradar.Constants
+import com.udacity.asteroidradar.PictureOfDay
 import com.udacity.asteroidradar.main.reposiory.AsteroidRepository
-import com.udacity.asteroidradar.network.response.ImageOfTheDayResponse
 import com.udacity.asteroidradar.network.retrofit.AsteroidService
 import kotlinx.coroutines.launch
 import java.lang.Exception
@@ -18,8 +18,8 @@ class MainViewModel(private val repository: AsteroidRepository) : ViewModel() {
     private val filterLiveData = MutableLiveData<AsteroidService.GetAsteroidsFilter>()
     private lateinit var startDate: String
     private lateinit var endDate: String
-    private val _imageOfTheDay = MutableLiveData<ImageOfTheDayResponse>()
-    val imageOfTheDay: LiveData<ImageOfTheDayResponse>
+    private val _imageOfTheDay = MutableLiveData<PictureOfDay>()
+    val imageOfTheDay: LiveData<PictureOfDay>
         get() = _imageOfTheDay
 
     init {

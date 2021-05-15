@@ -2,10 +2,10 @@ package com.udacity.asteroidradar.main.reposiory
 
 import androidx.lifecycle.LiveData
 import com.udacity.asteroidradar.Asteroid
+import com.udacity.asteroidradar.PictureOfDay
 import com.udacity.asteroidradar.api.parseAsteroidsJsonResult
 import com.udacity.asteroidradar.database.AsteroidDatabaseDao
 import com.udacity.asteroidradar.network.api.AsteroidServiceApi
-import com.udacity.asteroidradar.network.response.ImageOfTheDayResponse
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import org.json.JSONObject
@@ -25,7 +25,7 @@ class AsteroidRepository(
         }
     }
 
-    suspend fun getImageOfTheDay() : ImageOfTheDayResponse{
+    suspend fun getImageOfTheDay() : PictureOfDay{
         return withContext(Dispatchers.IO) {
             api.getImageOfTheDay()
         }

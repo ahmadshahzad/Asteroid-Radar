@@ -22,7 +22,8 @@ class AsteroidApplication : Application() {
             val constraints = Constraints.Builder()
                 .setRequiredNetworkType(NetworkType.UNMETERED)
                 .setRequiresBatteryNotLow(true)
-                .setRequiresCharging(true)
+                // this one doesn't work with emulator.
+//                .setRequiresCharging(true)
                 .build()
 
             val work = PeriodicWorkRequestBuilder<RefreshDataWork>(1, TimeUnit.DAYS)
