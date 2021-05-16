@@ -47,6 +47,8 @@ fun loadImage(imageView: ImageView?, url: String?, mediaType: String?) {
         if (!url.isNullOrEmpty() && mediaType == "image") {
             Picasso.get()
                 .load(url)
+                .placeholder(R.drawable.placeholder_picture_of_day)
+                .error(R.drawable.placeholder_picture_of_day)
                 .into(it)
         }
     }
